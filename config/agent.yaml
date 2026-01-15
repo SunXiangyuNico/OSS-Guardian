@@ -1,0 +1,41 @@
+# OSS-Guardian Agent Configuration
+
+agent:
+  enabled: true
+  provider: openai
+  model: qwen-plus-latest
+  api_key: "sk-m0q9BjZrok3AwJSx0d5c289688Eb4f188d09B3552614A6C9"
+  base_url: "https://aihubmix.com/v1"
+  timeout: 60
+  max_retries: 5
+  timeout_connect: 10
+  timeout_read: 60
+  timeout_write: 20
+  network_enabled: true
+  evidence_required: true
+  max_findings: 10
+  max_candidates: 24
+  max_candidates_per_call: 6
+  max_snippets: 24
+  max_snippet_lines: 6
+  max_chars: 12000
+  max_file_chars: 4000
+  select_max_tokens: 256
+  analyze_max_tokens: 2048
+  max_execution_log_chars: 2000
+  max_dynamic_targets: 3
+  select_preview_lines: 120
+  prompt_select_path: config/agent_prompt_select.txt
+  prompt_analyze_path: config/agent_prompt.txt
+
+  redaction:
+    enabled: true
+    patterns:
+      - "sk-[A-Za-z0-9]{16,}"
+      - "AKIA[0-9A-Z]{16}"
+      - "https?://[^\\s\"']+"
+
+  cache:
+    enabled: true
+    path: data/agent_cache
+    ttl_seconds: 86400

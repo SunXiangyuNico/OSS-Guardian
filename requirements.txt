@@ -1,0 +1,19 @@
+# OSS-Guardian Dependencies
+
+# Web UI Framework
+streamlit>=1.28.0
+
+# Configuration File Parsing
+pyyaml>=6.0
+
+# AI Agent Provider (OpenAI-compatible)
+openai>=1.0.0
+
+# CVE lookup (OSV API)
+requests>=2.31.0
+
+# Process Monitoring (Go/Java dynamic analysis)
+psutil>=5.9.0
+
+# Optional: Java syntax parser (faster syntax check when installed)
+javalang>=0.13.0
