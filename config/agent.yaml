@@ -4,8 +4,8 @@ agent:
   enabled: true
   provider: openai
   model: qwen-plus-latest
-  api_key: "sk-m0q9BjZrok3AwJSx0d5c289688Eb4f188d09B3552614A6C9"
-  base_url: "https://aihubmix.com/v1"
+  api_key: ""
+  base_url: ""
   timeout: 60
   max_retries: 5
   timeout_connect: 10
